@@ -10,17 +10,14 @@ html, body{
 .nav-item > a {
     color: whitesmoke;
 }
-.footer {
-    background-color: #ffebcc; 
-    text-align: center;
-}
-#search-recipe-btn {
+
+#search-btn {
     margin-top: 10px;
     background-color: #92B558;
     border: 1px solid #92B558;
 
 }
-#top-recipe-btn {
+#top-search-btn {
     margin-top: 10px;
     background-color: #92B558;
     border: 1px solid #92B558; 
@@ -37,7 +34,19 @@ html, body{
 }
 
 .footer{
-    bottom: -30px;
+    bottom: -5px;
     position: absolute;
     width: 100%;
+    background-color: #92B558; 
+    text-align: center;
+}
+.recipe-container{
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.recipePhoto {
+    width: 300px;
+    height: auto;
+    padding-right: 20px;
 }

@@ -42,19 +42,19 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2 class="card-title">Make a Delicious Meal At Home</h2>
-                        <h3>Find a Recipe</h3>
+                        <h2 class="card-title">Order a Delicious Drink Somewhere</h2>
+                        <h3>Find a Bar</h3>
                     </div>
                     <div class="card-body">
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="dish-input">Dish Type</label>
-                                    <input type="text" class="form-control" id="dish-input">
+                                    <label for="city-input">City</label>
+                                    <input type="text" class="form-control" id="city-input">
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="ingredient-input">Ingredient</label>
-                                    <input type="text" class="form-control" id="ingredient-input">
+                                    <label for="state-input">State</label>
+                                    <input type="text" class="form-control" id="state-input">
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="cuisine-input">Cuisine</label>
@@ -63,10 +63,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary btn-lg fas fa-utensil-spoon" id="search-recipe-btn" type="submit"> Search</button>
+                                    <button class="btn btn-primary btn-lg fas fa-beer" id="search-btn" type="submit"> Search</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary btn-lg far fa-star" id="top-recipe-btn" type="submit"> Trending</button>
+                                    <button class="btn btn-primary btn-lg far fa-star" id="top-search-btn" type="submit"> Trending</button>
                                 </div>
                             </div>
                         </form>
@@ -78,7 +78,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Results</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" id="barCard">
                     </div>
                 </div>
             </div>
@@ -95,7 +95,7 @@
     </footer>
 </div>
 
-    <script src="script/cook.js"></script>
+    <script src="script/drink.js"></script>
 </body>
 
 </html>

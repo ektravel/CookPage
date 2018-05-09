@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var recipes = [];
 
-    $("#search-recipe-btn").on("click", function (event) {
+    $("#search-btn").on("click", function (event) {
         event.preventDefault();
         var recipeSearchInput = $("#dish-input").val();
 
@@ -13,8 +13,6 @@ $(document).ready(function () {
 
         console.log(recipeSearchInput);
 
-        //var queryURL = "http://cors-proxy.htmldriven.com/?url=http://food2fork.com/api/search?key=7cd47955dffd41deaec51a869580847a&q=" + recipeSearchInput;
-
         var queryURL = "https://food2fork.com/api/search?key=7cd47955dffd41deaec51a869580847a&q=" + recipeSearchInput;
 
         ///////////////////////////////////////////////////////
@@ -24,16 +22,22 @@ $(document).ready(function () {
         var targetUrl = queryURL;
 
         $.get(proxyUrl + targetUrl, function (response) {
-            console.log(response);
-        });
+        console.log(response);
+        var response1 = JSON.parse(response);
 
-        ////////////////////////////////////////////////////////
+        for (var i = 0; i < 5; i++) {
+            console.log(response1.count);
+            console.log(response1.recipes);
+        var recipeTitle = response1.recipes[i].title;
+        var recipeImage = response1.recipes[i].image_url;
+        var recipeURL = response1.recipes[i].source_url; 
+        var recipeSource = response1.recipes[i].publisher;  
+        
 
-    
-        // var searchResult = JSON.stringify(response);
-        // console.log(searchResult);
+        $("#recipeCard").append(
+           "<div class='recipe-container'><img class='recipePhoto' src='" + recipeImage + "'/>" + "<br/><a href ='" + recipeSource + recipeURL + "' target='_blank'>" + recipeTitle + "</a>" + "<br/> Recipe Source: " + recipeSource + "<br/></div>")
+        };
 
-        // });
-
+        });           
     });
 });
