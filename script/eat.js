@@ -1,6 +1,6 @@
 // This .on("click") function will trigger the AJAX Call
 var info = "";
-$("#find").on("click", function(event) {
+$("#search-btn").on("click", function(event) {
   $(".city").remove();
   // event.preventDefault() can be used to prevent an event's default behavior.
   // Here, it prevents the submit button from trying to submit a form when clicked
