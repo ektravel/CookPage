@@ -5,9 +5,10 @@ $("#find").on("click", function(event) {
   // Here, it prevents the submit button from trying to submit a form when clicked
   event.preventDefault();
   // Here we grab the text from the input box
-  var cities = $("#cities-input").val();
+  var eatSearching = $("#cities-input").val();
   // Here we construct our URL
-  var queryURL = "https://developers.zomato.com/api/v2.1/cities?q=" + cities;
+  var queryURL =
+    "https://developers.zomato.com/api/v2.1/cities?q=" + eatSearching;
 
   // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
   // and display it in the div with an id of movie-view
@@ -20,7 +21,8 @@ $("#find").on("click", function(event) {
     }
   }).then(function(response) {
     for (i = 0; i < response.location_suggestions.length; i++) {
-      console.log(i);
+      console.log(response.location_suggestions[i].state_name);
+
       $("#holder").append(
         "<p><button>" +
           JSON.stringify(response.location_suggestions[i].name) +
