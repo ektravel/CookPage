@@ -16,84 +16,80 @@
 </head>
 
 <body>
-<div id = "containers">
+    <div id="containers">
 
-    <nav class="navbar navbar-dark" style="background-color: #92B558;">
-        <span class="navbar-brand mb-0 h1">Eat Drink Cook</span>
-        <div class="nav">
-            <li class="nav-item">
-                <a class="nav-item nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item nav-link" href="eat.html">Eat</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item nav-link" href="#">Drink
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-item nav-link" href="cook.html">Cook</a>
-            </li>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="card-title">Order a Delicious Drink Somewhere</h2>
-                        <h3>Find a Bar</h3>
+        <nav class="navbar navbar-dark" style="background-color: #92B558;">
+            <span class="navbar-brand mb-0 h1">Eat Drink Cook</span>
+            <div class="nav">
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="eat.html">Eat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="#">Drink
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="cook.html">Cook</a>
+                </li>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Order a Delicious Drink Somewhere</h2>
+                            <h3>Find a Bar</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="city-input">City</label>
+                                        <input type="text" class="form-control" id="city-input">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="state-input">State</label>
+                                        <input type="text" class="form-control" id="state-input">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="cuisine-input">Cuisine</label>
+                                        <input type="text" class="form-control" id="cuisine-input">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-primary btn-lg fas fa-beer" id="search-btn" type="submit"> Search</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-primary btn-lg far fa-star" id="top-search-btn" type="submit"> Trending</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-md-4">
-                                    <label for="city-input">City</label>
-                                    <input type="text" class="form-control" id="city-input">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="state-input">State</label>
-                                    <input type="text" class="form-control" id="state-input">
-                                </div>
-                                <div class="form-group col-md-4">
-                                    <label for="cuisine-input">Cuisine</label>
-                                    <input type="text" class="form-control" id="cuisine-input">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <button class="btn btn-primary btn-lg fas fa-beer" id="search-btn" type="submit"> Search</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button class="btn btn-primary btn-lg far fa-star" id="top-search-btn" type="submit"> Trending</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
 
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Results</h3>
-                    </div>
-                    <div class="card-body" id="barCard">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Results</h3>
+                        </div>
+                        <div class="card-body" id="barCard">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    
-
-
-    <footer class="footer">
+        <footer class="footer">
             <div class="footer text-muted">
-            Copyright &#169;
-        </div>
-    </footer>
-</div>
+                Copyright &#169;
+            </div>
+        </footer>
+    </div>
 
     <script src="script/drink.js"></script>
 </body>

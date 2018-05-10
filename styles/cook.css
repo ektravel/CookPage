@@ -40,13 +40,31 @@ html, body{
     background-color: #92B558; 
     text-align: center;
 }
+/* Eat CSS */
+
+
+/* Cook CSS */
 .recipe-container{
     position: relative;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 .recipePhoto {
-    width: 300px;
+    /* width: 200px; */
+    max-width:100%;
     height: auto;
     padding-right: 20px;
+
+}
+/* Bar CSS */
+.bar-container{
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.barPhoto{
+    width: 200px; 
+    height: auto;
+    padding-right: 20px;
+    padding-bottom: 10px;
 }

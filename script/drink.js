@@ -26,16 +26,15 @@ $(document).ready(function () {
           var barTitle = response1.success.results[i].Name;
           var barImage = response1.success.results[i].Bar_Image;
           var barURL = response1.success.results[i].Bar_Url;
+          var barAddress = response1.success.results[i].Address +", "+ response1.success.results[i].City +", "+ response1.success.results[i].State + ", " + response1.success.results[i].Zip + ", Phone: " + response1.success.results[i].Phone;
+          var barWebsite = response1.success.results[i].Bar_Website;
+          var barHours = response1.success.results[i].Hours;
+          var barType = response1.success.results[i].Type;
+
           $("#barCard").append(
-            "<div class='bar-container'><img src='" + barImage + "'/><a href ='" +  barURL + "' target='_blank'>" + barTitle + "</a><br/></div>"
-          )
+            "<div class='row bar-container'><div class='col-md-3'><img class='barPhoto'src='" + barImage + "'/></div>" + "<div class = 'col-md-9'><a href ='" +  barURL + "'target='_blank'>" + barTitle + "</a><br/>" + "Address: " + barAddress + "<br/>" + "Website: "  + barWebsite + "<br/>" + "Hours: " + barHours + "<br/>" + "Venue Type: " + barType + "</div></div>")
         };
-
-
-
       });
-
-      
-
     });
   });
+
