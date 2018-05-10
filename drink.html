@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/cook.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <title>Cook</title>
+    <title>Eat Drink Cook</title>
 </head>
 
 <body>
@@ -47,20 +47,31 @@
                         </div>
                         <div class="card-body">
                             <form>
+
                                 <div class="form-row">
                                     <div class="form-group col-md-4">
-                                        <label for="city-input">City</label>
-                                        <input type="text" class="form-control" id="city-input">
+                                        <label for="zip-input">Zip Code (mandatory)</label>
+                                        <input type="text" class="form-control" id="zip-input">
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="state-input">State</label>
-                                        <input type="text" class="form-control" id="state-input">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="cuisine-input">Cuisine</label>
-                                        <input type="text" class="form-control" id="cuisine-input">
-                                    </div>
+                                    <div class="input-group mb-5 col-md-7">
+                                            <div class="input-group-prepend">
+                                              <label class="input-group-text" for="inputGroupSelect01">Type</label>
+                                            </div>
+                                            <select class="custom-select" id="inputGroupSelect01">
+                                              <option value="none" selected>Choose...</option>
+                                              <option value="beer">Beer</option>
+                                              <option value="wine">Wine</option>
+                                              <option value="coctail">Cocktail</option>
+                                              <option value="dive">Dive</option>
+                                              <option value="lounge">Lounge</option>
+                                              <option value="music">Music Venue</option>
+                                              <option value="pub">Pub</option>
+                                              <option value="sports">Sports</option>
+                                              <option value="club">Club</option>
+                                            </select>
+                                        </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <button class="btn btn-primary btn-lg fas fa-beer" id="search-btn" type="submit"> Search</button>

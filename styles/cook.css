@@ -68,3 +68,8 @@ html, body{
     padding-right: 20px;
     padding-bottom: 10px;
 }
+.input-group{
+    /* margin-left: 10px; */
+    margin-top: 31px;
+    float: right;
+}
