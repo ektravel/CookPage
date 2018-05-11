@@ -29,15 +29,15 @@ body {
 
 #containers{
     min-height: 100%;
+    position: relative;
 }
 
 /*********Navbar*******/
 
 .navbar {
-    height: 90px;
 
     position: relative;
-    background-image: url("https://vignette.wikia.nocookie.net/nconspicuous/images/9/97/Navbar-background-fitted.jpg/revision/latest?cb=20130130201603");
+    background-color: #92B558;
 }
 
 .nav-item>a {
@@ -99,15 +99,11 @@ a:hover {
 /*************Footer**********/
 
 .footer {
-    bottom: -5px;
-    position: relative;
+    bottom: 0;
+    position: absolute;
     width: 100%;
     text-align: center;
-    height: 55px;
-    line-height: 55px;
-    background-image: url("http://biketech21.sg/wp-content/uploads/2014/09/footer-background.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color: #92B558
 }
 
 /********** Eat CSS *************/
