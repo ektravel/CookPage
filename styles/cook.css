@@ -2,6 +2,30 @@ html, body{
     height: 100%;
 }
 
+.drinkBody {
+    background: url("../images/drinkPage2.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.eatBody {
+    background: url("../images/eatPage.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.cookBody {
+    background: url("../images/cookPage.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.homeBody {
+    background: url("../images/homeBody.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
 #containers{
     min-height: 100%;
     position: relative;
@@ -25,12 +49,14 @@ html, body{
 .card-header {
     background-color:  #92B558;
     color: whitesmoke;
+    opacity: 0.9;
 
 }
 .card {
     border: 1px solid  #92B558;
     margin-top: 32px;
     margin-bottom: 32px;
+    opacity: 0.9;
 }
 
 .footer{

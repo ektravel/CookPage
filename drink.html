@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="styles/cook.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <script src="https://www.gstatic.com/firebasejs/5.0.2/firebase.js"></script>
     <title>Eat Drink Cook</title>
 </head>
 
-<body>
+<body class="drinkBody">
     <div id="containers">
 
         <nav class="navbar navbar-dark" style="background-color: #92B558;">
@@ -55,22 +56,22 @@
                                         <input type="text" class="form-control" id="zip-input">
                                     </div>
                                     <div class="input-group mb-5 col-md-7">
-                                            <div class="input-group-prepend">
-                                              <label class="input-group-text" for="inputGroupSelect01">Type</label>
-                                            </div>
-                                            <select class="custom-select" id="inputGroupSelect01">
-                                              <option value="none" selected>Choose...</option>
-                                              <option value="beer">Beer</option>
-                                              <option value="wine">Wine</option>
-                                              <option value="coctail">Cocktail</option>
-                                              <option value="dive">Dive</option>
-                                              <option value="lounge">Lounge</option>
-                                              <option value="music">Music Venue</option>
-                                              <option value="pub">Pub</option>
-                                              <option value="sports">Sports</option>
-                                              <option value="club">Club</option>
-                                            </select>
+                                        <div class="input-group-prepend">
+                                            <label class="input-group-text" for="inputGroupSelect01">Type</label>
                                         </div>
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option value="none" selected>Choose...</option>
+                                            <option value="beer">Beer</option>
+                                            <option value="wine">Wine</option>
+                                            <option value="coctail">Cocktail</option>
+                                            <option value="dive">Dive</option>
+                                            <option value="lounge">Lounge</option>
+                                            <option value="music">Music Venue</option>
+                                            <option value="pub">Pub</option>
+                                            <option value="sports">Sports</option>
+                                            <option value="club">Club</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <div class="row">
@@ -91,7 +92,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Results</h3>
                         </div>
-                        <div class="card-body" id="barCard">
+                        <div class="card-body" id="barCard" >
                         </div>
                     </div>
                 </div>
