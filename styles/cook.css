@@ -1,70 +1,116 @@
-html, body{
+html,
+body {
     height: 100%;
 }
 
-#containers{
-    min-height: 100%;
+/**********Navbar**********/
+
+.navbar {
+    height: 90px;
     position: relative;
+    background-image: url("https://vignette.wikia.nocookie.net/nconspicuous/images/9/97/Navbar-background-fitted.jpg/revision/latest?cb=20130130201603");
 }
 
-.nav-item > a {
+.nav-item>a {
     color: whitesmoke;
 }
+
+.navbar-brand {
+    margin-left: 85px;
+    font-size: 30px;
+}
+
+.nav {
+    margin-right: 85px;
+    font-size: 20px;
+}
+
+li {
+    border-right: 1px solid whitesmoke;
+    line-height: 60%;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+a:hover {
+    color: grey;
+}
+
+/**************Main**************/
 
 #search-btn {
     margin-top: 10px;
     background-color: #92B558;
     border: 1px solid #92B558;
-
 }
+
 #top-search-btn {
     margin-top: 10px;
     background-color: #92B558;
-    border: 1px solid #92B558; 
+    border: 1px solid #92B558;
 }
-.card-header {
-    background-color:  #92B558;
-    color: whitesmoke;
 
+.card-header {
+    background-color: #92B558;
+    color: whitesmoke;
 }
+
 .card {
-    border: 1px solid  #92B558;
+    border: 1px solid #92B558;
     margin-top: 32px;
     margin-bottom: 32px;
 }
 
-.footer{
+/*************Footer**********/
+
+.footer {
     bottom: -5px;
-    position: absolute;
-    width: 100%;
-    background-color: #92B558; 
-    text-align: center;
-}
-/* Eat CSS */
-
-
-/* Cook CSS */
-.recipe-container{
     position: relative;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    background-image: url("http://biketech21.sg/wp-content/uploads/2014/09/footer-background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
-.recipePhoto {
-    /* width: 200px; */
-    max-width:100%;
-    height: auto;
-    padding-right: 20px;
 
-}
-/* Bar CSS */
-.bar-container{
+/********** Eat CSS *************/
+
+/************ Bar CSS ************/
+
+.bar-container {
     position: relative;
     margin-right: 20px;
     margin-bottom: 30px;
 }
-.barPhoto{
-    width: 200px; 
+
+.barPhoto {
+    width: 200px;
     height: auto;
     padding-right: 20px;
     padding-bottom: 10px;
+}
+
+.input-group {
+    /* margin-left: 10px; */
+    margin-top: 31px;
+    float: right;
+}
+
+/********** Cook CSS ************/
+
+.recipe-container {
+    position: relative;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.recipePhoto {
+    /* width: 200px; */
+    max-width: 100%;
+    height: auto;
+    padding-right: 20px;
 }
