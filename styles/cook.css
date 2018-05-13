@@ -3,23 +3,11 @@ body {
     height: 100%;
 }
 
-.drinkBody {
-    background: url("../images/drinkPage2.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
-}
 
-.eatBody {
-    background: url("../images/eatPage.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
-}
 
-.cookBody {
-    background: url("../images/cookPage.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
-}
+
+
+
 
 .homeBody {
     background: url("../images/homeBody.jpeg");
@@ -107,8 +95,18 @@ a:hover {
 }
 
 /********** Eat CSS *************/
+.eatBody {
+    background: url("../images/eatPage.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
 
 /************ Bar CSS ************/
+.drinkBody {
+    background: url("../images/drinkPage2.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
 
 .bar-container {
     position: relative;
@@ -130,6 +128,12 @@ a:hover {
 }
 
 /********** Cook CSS ************/
+.cookBody {
+    background: url("../images/cookPage.jpeg");
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+}
 
 .recipe-container {
     position: relative;
