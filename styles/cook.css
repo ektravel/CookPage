@@ -16,7 +16,7 @@ body {
 }
 
 .cookBody {
-    background: url("../images/cookPage.jpeg");
+    background: url("../images/cook5.jpeg");
     background-size: 100%;
     background-attachment: fixed;
 }
@@ -138,8 +138,19 @@ a:hover {
 }
 
 .recipePhoto {
-    /* width: 200px; */
     max-width: 100%;
     height: auto;
     padding-right: 20px;
 }
+#cookMoreResultsButtons{
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 20px;
+}
+/* #cookNextButton {
+    
+}
+#cookPreviousButton{
+
+} */
