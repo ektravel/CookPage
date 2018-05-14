@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var recipes = [];
     var num_searches = 0;
+    var nextPage = 1;
 
     var config = {
         apiKey: "AIzaSyBF_HHzl2akTUZMDlIRo3uVyOXgG7lDa1g",
@@ -14,6 +15,26 @@ $(document).ready(function () {
 
     $("#search-btn").on("click", function (event) {
         event.preventDefault();
+        loadResults();  
+    });
+
+    $("#cookNextButton").on("click", function (event) {
+        event.preventDefault();
+        nextPage ++;
+
+        loadResults();  
+    }); 
+
+    $("#cookPreviousButton").on("click", function (event) {
+        event.preventDefault();
+        nextPage --;
+
+        loadResults();  
+    }); 
+
+    function loadResults(){
+        $("#recipeCard").empty();
+
         var recipeSearchInput = $("#dish-input").val();
 
         if ($("#ingredient-input").val())
@@ -31,7 +52,7 @@ $(document).ready(function () {
              recipeObject
         })
 
-        var queryURL = "https://food2fork.com/api/search?key=7cd47955dffd41deaec51a869580847a&q=" + recipeSearchInput;
+        var queryURL = "https://food2fork.com/api/search?key=7cd47955dffd41deaec51a869580847a&q=" + recipeSearchInput + "&page=" + nextPage;
 
         ///////////////////////////////////////////////////////
         // heroku workaround for Cors
@@ -43,17 +64,19 @@ $(document).ready(function () {
         var response1 = JSON.parse(response);
 
         for (var i = 0; i < 5; i++) {
-        var recipeTitle = response1.recipes[i].title;
-        var recipeImage = response1.recipes[i].image_url;
-        var recipeURL = response1.recipes[i].source_url; 
-        var recipeSource = response1.recipes[i].publisher;  
+            var recipeTitle = response1.recipes[i].title;
+            var recipeImage = response1.recipes[i].image_url;
+            var recipeURL = response1.recipes[i].source_url; 
+            var recipeSource = response1.recipes[i].publisher; 
 
-        $("#recipeCard").append(
-           "<div class='row recipe-container'><div class='col-md-3'><img class=' recipePhoto' src='" + recipeImage + "'/></div>" + "<div class = 'col-md-9'><a href ='" + recipeURL + "'target='_blank'>" + recipeTitle + "</a><br>" + " Recipe Source: " + recipeSource + "</div></div>")
+            $("#recipeCard").append(
+            "<div class='row recipe-container'><div class='col-md-3'><img class=' recipePhoto' src='" + recipeImage + "'/></div>" + "<div class = 'col-md-9'><a href ='" + recipeURL + "'target='_blank'>" + recipeTitle + "</a><br>" + " Recipe Source: " + recipeSource + "</div></div>")
         };
 
-        });           
-    });
+        }); 
+    }
+
+
     firebase.database().ref().on("child_added",function(snapshot){
         var recipe1 = (snapshot.val().recipeObject.input1);
         recipes.push(recipe1);

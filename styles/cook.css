@@ -4,15 +4,13 @@ body {
 }
 
 
-
-
-
-
-
 .homeBody {
-    background: url("../images/homeBody.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
+    background: url("../images/homeBody.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
 #containers{
@@ -96,16 +94,20 @@ a:hover {
 
 /********** Eat CSS *************/
 .eatBody {
-    background: url("../images/eatPage.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
+    background: url("../images/eatPage.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /************ Bar CSS ************/
 .drinkBody {
-    background: url("../images/drinkPage2.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
+    background: url("../images/drinkPage2.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .bar-container {
@@ -129,10 +131,11 @@ a:hover {
 
 /********** Cook CSS ************/
 .cookBody {
-    background: url("../images/cookPage.jpeg");
-    background-size: 100%;
-    background-attachment: fixed;
-    background-repeat:no-repeat;
+    background: url("../images/cook5.jpeg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .recipe-container {
@@ -142,8 +145,19 @@ a:hover {
 }
 
 .recipePhoto {
-    /* width: 200px; */
     max-width: 100%;
     height: auto;
     padding-right: 20px;
 }
+#cookMoreResultsButtons{
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    margin-bottom: 20px;
+}
+/* #cookNextButton {
+
+}
+#cookPreviousButton{
+
+} */
