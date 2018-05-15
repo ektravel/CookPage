@@ -70,7 +70,6 @@ a:hover {
 .card-header {
     background-color: #92B558;
     color: whitesmoke;
-    opacity: 0.9;
 
 
 }
@@ -79,7 +78,6 @@ a:hover {
     border: 1px solid #92B558;
     margin-top: 32px;
     margin-bottom: 32px;
-    opacity: 0.9;
 }
 
 /*************Footer**********/
@@ -110,10 +108,24 @@ a:hover {
     background-size: cover;
 }
 
+/* added margin-left, padding, border, border-radius  -CP */
 .bar-container {
     position: relative;
     margin-right: 20px;
+    margin-left: 20px;
     margin-bottom: 30px;
+    padding:30px;
+    border: solid 1px #92B558;
+    border-radius: 5px;
+    background-color: white;
+}
+/* sub-heaading was turning gray so I changed it to white -CP */
+h2, h3, h4  {
+    color: white;
+}
+
+#barCard {
+    background-color: rgb(245, 244, 244);
 }
 
 .barPhoto {
@@ -121,6 +133,12 @@ a:hover {
     height: auto;
     padding-right: 20px;
     padding-bottom: 10px;
+
+}
+
+/* increased font-size on bar title returns -CP */
+#barTitle {
+    font-size: 25px;
 }
 
 .input-group {
@@ -156,8 +174,6 @@ a:hover {
     margin-bottom: 20px;
 }
 /* #cookNextButton {
-
 }
 #cookPreviousButton{
-
 } */
