@@ -119,6 +119,7 @@ a:hover {
     border: solid 1px #92B558;
     border-radius: 5px;
     background-color: white;
+    box-shadow: 5px 5px lightgray;
     
 }
 /* sub-heaading was turning gray so I changed it to white -CP */
@@ -132,10 +133,10 @@ h2, h3, h4  {
 }
 
 .barPhoto {
-    width: 200px;
+    width: 150px;
     height: auto;
     padding-right: 20px;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 
 }
 
@@ -182,6 +183,7 @@ h2, h3, h4  {
     border: solid 1px #92B558;
     border-radius: 5px;
     background-color: white;
+    box-shadow: 5px 5px lightgray;
 }
 
 #recipeTitle {
@@ -195,11 +197,11 @@ h2, h3, h4  {
 }
 
 .recipePhoto {
-    max-width: 100%;
+    max-width: 150px;
     height: auto;
     padding-right: 20px;
     /* added by -CP */
-    padding-bottom: 10px;
+   /* padding-bottom: 10px; */
 }
 
 /* adjusted padding and got rid of margin -CP */
