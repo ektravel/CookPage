@@ -177,3 +177,8 @@ h2, h3, h4  {
 }
 #cookPreviousButton{
 } */
+
+p {
+    font-size: 25px;
+    color: grey;
+}
