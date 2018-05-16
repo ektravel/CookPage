@@ -109,6 +109,6 @@ $(document).ready(function () {
             max = currentMax;
             }
         }
-        $("#trendingresults").html("The most searched item is.... "+mostTrending)
+        $("#trendingresults").html(mostTrending+" is very popular right now!")
 })
   });
