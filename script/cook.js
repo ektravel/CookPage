@@ -62,6 +62,7 @@ $(document).ready(function () {
 
         $.get(proxyUrl + targetUrl, function (response) {
         var response1 = JSON.parse(response);
+        if (!response1.recipes[0]) { alert("No Recipes found for " + recipeSearchInput)}
         $("#recipeCard").html("<div id='accordion'>");
         for (var i = 0; i < 5; i++) {
             var recipeTitle = response1.recipes[i].title;

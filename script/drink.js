@@ -64,6 +64,7 @@ $(document).ready(function () {
 
       $.get(proxyUrl + targetUrl, function (response) {
         var response1 = JSON.parse(response);
+        if (!response1.success){alert("Invalid Location")}                        //We can keep the alert or display the error in the results
         console.log(response1);
         var resultsArr = response1.success.results;
         $("#barCard").html("<div id='accordion'>");
