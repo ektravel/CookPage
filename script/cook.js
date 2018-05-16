@@ -110,6 +110,6 @@ $(document).ready(function () {
             for (var i = recipes.length-1;i >= 0; i--){
                 console.log(recipes[i]);
             }
-            console.log("Most trending result is: " + mostTrending)
+            $("#trendingresults").html("Most trending result is: " + mostTrending);
     })
 });
