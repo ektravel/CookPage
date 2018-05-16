@@ -61,6 +61,7 @@ $(document).ready(function () {
         var targetUrl = queryURL;
 
         $.get(proxyUrl + targetUrl, function (response) {
+        if (!response1.success){alert("No results found for" + recipeSearchInput)}
         var response1 = JSON.parse(response);
         $("#recipeCard").html("<div id='accordion'>");
         for (var i = 0; i < 5; i++) {
