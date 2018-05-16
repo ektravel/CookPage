@@ -109,9 +109,6 @@ $(document).ready(function () {
             max = currentMax;
             }
         }
-        console.log("Recent Results");
-          console.log(drinks);
-        console.log("Most trending result: "+mostTrending)
-        //$("#trendingresult").append("<p>The most searched item is.... "+mostTrending+" !!</p>")
+        $("#trendingresults").html("The most searched item is.... "+mostTrending)
 })
   });
