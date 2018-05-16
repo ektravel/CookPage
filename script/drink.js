@@ -109,6 +109,6 @@ $(document).ready(function () {
             max = currentMax;
             }
         }
-        $("#trendingresults").html(mostTrending+" is very popular right now!")
+        $("#trendingresults").html(mostTrending+" is very popular right now!");
 })
   });
