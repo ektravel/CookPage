@@ -67,6 +67,11 @@ a:hover {
     border: 1px solid #92B558;
 }
 
+#trendingresults{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
 .card-header {
     background-color: #92B558;
     color: whitesmoke;
