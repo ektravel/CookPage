@@ -62,17 +62,18 @@ $(document).ready(function () {
 
         $.get(proxyUrl + targetUrl, function (response) {
         var response1 = JSON.parse(response);
-
+        if (!response1.recipes[0]) { alert("No Recipes found for " + recipeSearchInput)}
+        $("#recipeCard").html("<div id='accordion'>");
         for (var i = 0; i < 5; i++) {
             var recipeTitle = response1.recipes[i].title;
             var recipeImage = response1.recipes[i].image_url;
             var recipeURL = response1.recipes[i].source_url; 
             var recipeSource = response1.recipes[i].publisher; 
 
-            $("#recipeCard").append(
-            "<div class='row recipe-container'><div class='col-md-3'><img class=' recipePhoto' src='" + recipeImage + "'/></div>" + "<div class = 'col-md-9'><a id=recipeTitle href ='" + recipeURL + "'target='_blank'>" + recipeTitle + "</a><br>" + " Recipe Source: " + recipeSource + "</div></div>")
+            $("#accordion").append("<h3 class = acordHeader>" + recipeTitle + "</h3><div>"+
+            "<div class='row recipe-container'><div class='col-md-3'><img class=' recipePhoto' src='" + recipeImage + "'/></div>" + "<div class = 'col-md-9'><a id=recipeTitle href ='" + recipeURL + "'target='_blank'>" + recipeTitle + "</a><br>" + " Recipe Source: " + recipeSource + "</div></div>"+"</div>")
         };
-
+        $("#accordion").accordion();
         }); 
     }
 
