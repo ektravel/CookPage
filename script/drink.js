@@ -66,7 +66,7 @@ $(document).ready(function () {
         var response1 = JSON.parse(response);
         console.log(response1);
         var resultsArr = response1.success.results;
-        
+        $("#barCard").html("<div id='accordion'>");
         for (var i = 0; i < resultsArr.length; i++) {
           console.log(resultsArr[i]);
           var barTitle = resultsArr[i].Name;
@@ -77,9 +77,10 @@ $(document).ready(function () {
           var barHours = resultsArr[i].Hours;
           var barType = resultsArr[i].Type;
 
-          $("#barCard").append(
-            "<div class='row bar-container'><div class='col-md-3'><img class='barPhoto'src='" + barImage + "'/></div>" + "<div class = 'col-md-9'><a id=barTitle href ='" +  barURL + "'target='_blank'>" + barTitle + "</a><br/>" + "Address: " + barAddress + "<br/>" + "Website: "  + barWebsite + "<br/>" + "Hours: " + barHours + "<br/>" + "Venue Type: " + barType + "</div></div>")
+          $("#accordion").append("<h3 class = acordHeader>" + barTitle + "</h3>\<div>" + 
+            "<div class='row bar-container'><div class='col-md-3'><img class='barPhoto'src='" + barImage + "'/></div>" + "<div class = 'col-md-9'><a id=barTitle href ='" +  barURL + "'target='_blank'>" + barTitle + "</a><br/>" + "Address: " + barAddress + "<br/>" + "Website: "  + barWebsite + "<br/>" + "Hours: " + barHours + "<br/>" + "Venue Type: " + barType + "</div></div>"+"</div>")
         };
+        $("#accordion").accordion();
       });
     };
   

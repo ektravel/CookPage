@@ -132,6 +132,10 @@ h2, h3, h4  {
     color: white;
 }
 
+.acordHeader{
+    color: black;
+}
+
 #barCard {
     background-color: rgb(245, 244, 244);
     
