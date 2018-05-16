@@ -70,7 +70,7 @@ $(document).ready(function () {
             var recipeSource = response1.recipes[i].publisher; 
 
             $("#recipeCard").append(
-            "<div class='row recipe-container'><div class='col-md-3'><img class=' recipePhoto' src='" + recipeImage + "'/></div>" + "<div class = 'col-md-9'><a href ='" + recipeURL + "'target='_blank'>" + recipeTitle + "</a><br>" + " Recipe Source: " + recipeSource + "</div></div>")
+            "<div class='row recipe-container'><div class='col-md-3'><img class=' recipePhoto' src='" + recipeImage + "'/></div>" + "<div class = 'col-md-9'><a id=recipeTitle href ='" + recipeURL + "'target='_blank'>" + recipeTitle + "</a><br>" + " Recipe Source: " + recipeSource + "</div></div>")
         };
 
         }); 

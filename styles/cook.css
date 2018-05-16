@@ -106,6 +106,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
 }
 
 /* added margin-left, padding, border, border-radius  -CP */
@@ -118,6 +119,8 @@ a:hover {
     border: solid 1px #92B558;
     border-radius: 5px;
     background-color: white;
+    opacity: 1;
+    
 }
 /* sub-heaading was turning gray so I changed it to white -CP */
 h2, h3, h4  {
@@ -126,6 +129,7 @@ h2, h3, h4  {
 
 #barCard {
     background-color: rgb(245, 244, 244);
+    opacity: 0.9;
 }
 
 .barPhoto {
@@ -159,13 +163,25 @@ h2, h3, h4  {
 .recipe-container {
     position: relative;
     margin-right: 20px;
+    margin-left: 20px;
     margin-bottom: 20px;
+    /* everything below added by -CP */
+    padding: 30px;
+    border: solid 1px #92B558;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#recipeTitle {
+    font-size: 25px;
 }
 
 .recipePhoto {
     max-width: 100%;
     height: auto;
     padding-right: 20px;
+    /* added by -CP */
+    padding-bottom: 10px;
 }
 #cookMoreResultsButtons{
     text-align: center;
