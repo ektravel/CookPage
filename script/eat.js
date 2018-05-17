@@ -1,6 +1,16 @@
 // This .on("click") function will trigger the AJAX Call
 var start = 0
 var info = "";
+var items = []
+var config = {
+  apiKey: "AIzaSyAt95XfGpqgMHAtRLA8X2E5zw1HuZuViOg",
+  authDomain: "recent-users-eat.firebaseapp.com",
+  databaseURL: "https://recent-users-eat.firebaseio.com",
+  projectId: "recent-users-eat",
+  storageBucket: "recent-users-eat.appspot.com",
+  messagingSenderId: "1074501443447"
+};
+firebase.initializeApp(config);
 
 var cityInfo = false;
 $("#search-btn").on("click", function (event) {
@@ -11,6 +21,9 @@ $("#search-btn").on("click", function (event) {
     event.preventDefault();
     // Here we grab the text from the input box
     var cities = $("#cities-input").val();
+    firebase.database().ref().push({
+      cities
+ })
     // Here we construct our URL
     var queryURL =
       "https://developers.zomato.com/api/v2.1/locations?query=" + cities;
@@ -100,3 +113,35 @@ $("#holder").on("click", ".getCity", function (event) {
     cityInfo = true;
   });
 });
+firebase.database().ref().on("child_added",function(snapshot){
+  var item = (snapshot.val().cities);
+  items.push(item);
+    //num_searches += 1;
+    //if (num_searches == 6){
+        //num_searches = 5;
+       // $("#recentresults").children().last().remove();
+   // }
+   // $("#recentresults").prepend("<p>Search Item:"+recipe1+"</p>");
+});
+$("#top-search-btn").on("click", function (event) {
+  event.preventDefault();
+  var max = 1,  currentMax;
+      var mostTrending = items[0];
+      var current = 0;
+      for (var i = 0; i < (items.length - 1); i++)
+      {
+          current = items[i];
+          currentMax = 0;
+          for (var j = 1; j < items.length; j++)
+          {
+          if (current == items[j])
+              currentMax++;
+          }
+          if (currentMax > max)
+          {
+          mostTrending = current;
+          max = currentMax;
+          }
+      }
+      $("#trendingresults").html("Most trending result is: " + mostTrending);
+})
