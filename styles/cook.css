@@ -13,12 +13,12 @@ body {
 
 }
 .connect-header {
-    background-color: #9f2e21;
+    background-color: #be3a2bd1;
 }
 .connect {
     font-size: 20px;
     color: whitesmoke;
-    background-color: #9f2e21;
+    background-color: #be3a2bd1;
 }
 
 #containers{
@@ -31,7 +31,7 @@ body {
 .navbar {
 
     position: relative;
-    background-color: #9f2e21;
+    background-color: #be3a2bd1;
 }
 
 .nav-item>a {
@@ -65,14 +65,14 @@ a:hover {
 
 #search-btn {
     margin-top: 10px;
-    background-color: #9f2e21;
-    border: 1px solid #9f2e21;
+    background-color: #be3a2bd1;
+    border: 1px solid #be3a2bd1;
 }
 
 #top-search-btn {
     margin-top: 10px;
-    background-color: #9f2e21;
-    border: 1px solid #9f2e21;
+    background-color: #be3a2bd1;
+    border: 1px solid #be3a2bd1;
 }
 
 #trendingresults{
@@ -81,14 +81,14 @@ a:hover {
 }
 
 .card-header {
-    background-color: #9f2e21;
+    background-color: #be3a2bd1;
     color: whitesmoke;
 
 
 }
 
 .card {
-    border: 1px solid #9f2e21;
+    border: 1px solid #be3a2bd1;
     margin-top: 32px;
     margin-bottom: 32px;
 }
@@ -100,7 +100,7 @@ a:hover {
     position: absolute;
     width: 100%;
     text-align: center;
-    background-color: #9f2e21;
+    background-color: #be3a2bd1;
 }
 
 /********** Eat CSS *************/
@@ -129,7 +129,7 @@ a:hover {
     margin-left: 20px;
     margin-bottom: 30px;
     padding:30px;
-    border: solid 1px #9f2e21;
+    border: solid 1px #be3a2bd1;
     border-radius: 5px;
     background-color: white;
     box-shadow: 5px 5px lightgray;
@@ -197,7 +197,7 @@ h2, h3, h4  {
     margin-bottom: 20px;
     /* everything below added by -CP */
     padding: 30px;
-    border: solid 1px #9f2e21;
+    border: solid 1px #be3a2bd1;
     border-radius: 5px;
     background-color: white;
     box-shadow: 5px 5px lightgray;
