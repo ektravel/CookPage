@@ -12,10 +12,13 @@ body {
     background-size: cover;
 
 }
-
+.connect-header {
+    background-color: #9f2e21;
+}
 .connect {
     font-size: 20px;
     color: whitesmoke;
+    background-color: #9f2e21;
 }
 
 #containers{
