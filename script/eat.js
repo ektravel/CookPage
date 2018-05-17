@@ -1,5 +1,6 @@
 // This .on("click") function will trigger the AJAX Call
-var start = 0
+var start = 0;
+var topLimit = 0;
 var info = "";
 var items = []
 var config = {
@@ -41,11 +42,9 @@ $("#drinkPreviousButton").on("click", function (event) {
 
 
 function loadResults(event) {
-    if (cityInfo == false) {
       $(".city").remove();
       // event.preventDefault() can be used to prevent an event's default behavior.
       // Here, it prevents the submit button from trying to submit a form when clicked
-      event.preventDefault();
       // Here we grab the text from the input box
       var cities = $("#cities-input").val();
       firebase.database().ref().push({
@@ -62,15 +61,8 @@ function loadResults(event) {
           "user-key": "b77bc3b6066b58fd02f4c97a8b61ee93"
         }
       }).then(function (response) {
-        for (i = 0; i < response.location_suggestions.length; i++) {
-          $("#holder").append("<p class = 'city'><button class = 'getCity' value = " + i + " >" +
-            JSON.stringify(response.location_suggestions[i].title).replace(/"/gi, "") + " </button></p>"
-          );
-          
-        }
-      });
-    } else if (cityInfo === true) {
-      event.preventDefault();
+
+        info = response.location_suggestions[0]
       // Here we grab the text from the input box
       var cuisine = $("#cuisine-input").val();
       // Here we construct our URL
@@ -92,6 +84,7 @@ function loadResults(event) {
         }
       }).then(function (response) {
         var resultsArr = response.restaurants;
+        top = response.results_found;
         $("#holder").html("<div id='accordion'>");
         for (i = 0; i < resultsArr.length; i++) {
             var title = resultsArr[i].restaurant.name;
@@ -108,17 +101,16 @@ function loadResults(event) {
             $("#accordion").append("<h3 class = acordHeader>" + title + "</h3>\<div>" + 
             "<div class='row bar-container'><div class='col-md-3'><img class='barPhoto'src='" + resImage + "'/></div>" + "<div class = 'col-md-9'><a id=barTitle href ='" +  url + "'target='_blank'>" + title + "</a><br/>" + "Address: " + address + "<br/>" + "Cusine Type: "  + cuisine + "<br/>" + "Estimated price of two: " + cost + "<br/>" + "Rating: "+ rating +"/5 based on " + ratingCount + " votes" +"<br/>" + "<a href ='" +  menu + "'target='_blank'> Click here for the Menu!" + "</a></div></div>" +"</div>")
         };
-        console.log(resultsArr[0])
         $("#accordion").accordion();
       });
-    }
-}
+    });
+  }
+
 
 
 $("#holder").on("click", ".getCity", function (event) {
   var cities = $("#cities-input").val();
   var position = $(this).val();
-
   var queryURL =
     "https://developers.zomato.com/api/v2.1/locations?query=" + cities;
 
@@ -139,6 +131,7 @@ $("#holder").on("click", ".getCity", function (event) {
     cityInfo = true;
   });
 });
+
 firebase.database().ref().on("child_added",function(snapshot){
   var item = (snapshot.val().cities);
   items.push(item);
