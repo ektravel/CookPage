@@ -78,6 +78,8 @@ a:hover {
 #trendingresults{
     margin-left: 20px;
     margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold
 }
 
 .card-header {
