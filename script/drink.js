@@ -64,8 +64,10 @@ $(document).ready(function () {
 
       $.get(proxyUrl + targetUrl, function (response) {
         var response1 = JSON.parse(response);
-        if (!response1.success){alert("Invalid Location")}                        //We can keep the alert or display the error in the results
-        console.log(response1);
+        if (!response1.success){
+          $("#barCard").html("<p>Invalid Location</p>")
+        }
+        else{
         var resultsArr = response1.success.results;
         $("#barCard").html("<div id='accordion'>");
         for (var i = 0; i < resultsArr.length; i++) {
@@ -81,6 +83,7 @@ $(document).ready(function () {
           $("#accordion").append("<h3 class = acordHeader>" + barTitle + "</h3>\<div>" + 
             "<div class='row bar-container'><div class='col-md-3'><img class='barPhoto'src='" + barImage + "'/></div>" + "<div class = 'col-md-9'><a id=barTitle href ='" +  barURL + "'target='_blank'>" + barTitle + "</a><br/>" + "Address: " + barAddress + "<br/>" + "Website: "  + barWebsite + "<br/>" + "Hours: " + barHours + "<br/>" + "Venue Type: " + barType + "</div></div>"+"</div>")
         };
+        }
         $("#accordion").accordion();
       });
     };
