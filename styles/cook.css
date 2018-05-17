@@ -13,6 +13,11 @@ body {
 
 }
 
+.connect {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
 #containers{
     min-height: 100%;
     position: relative;
@@ -111,7 +116,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+
 }
 
 /* added margin-left, padding, border, border-radius  -CP */
@@ -125,7 +130,7 @@ a:hover {
     border-radius: 5px;
     background-color: white;
     box-shadow: 5px 5px lightgray;
-    
+
 }
 /* sub-heaading was turning gray so I changed it to white -CP */
 h2, h3, h4  {
@@ -138,7 +143,7 @@ h2, h3, h4  {
 
 #barCard {
     background-color: rgb(245, 244, 244);
-    
+
 }
 
 .barPhoto {
@@ -151,7 +156,7 @@ h2, h3, h4  {
 
 #barContainer {
     background-color: white;
-    
+
 }
 
 
@@ -202,7 +207,7 @@ h2, h3, h4  {
 /* added by -CP */
 #recipeCard {
     background-color: rgb(245, 244, 244);
-    
+
 }
 
 .recipePhoto {
